@@ -121,7 +121,7 @@ git switch -c fix
 # Отправляем её на GitHub
 git push -u origin fix
 ```
-
+![alt text](/02-git-02-base/img/image.png)
 
 
 ----
