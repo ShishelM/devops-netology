@@ -123,5 +123,22 @@ git push -u origin fix
 ```
 ![alt text](/02-git-02-base/img/image.png)
 
+```
+pavel@ubuntu-24:~/devops-netology$ git log --oneline
+d278e4e (HEAD -> fix, origin/fix, gitlab/fix) add new 3
+781ccfe add new 2
+6ed99f4 add new row to readme
+2793c57 Fix: readme
+d4e5e81 Fix: readme amd img
+6a91b0b Fix: convert submodule to normal folder with files
+dc92e1e Final fix: proper folder structure
+```
+можно так же посмотреть ветвления так:
+`git log --oneline --graph --all`
+![alt text](/02-git-02-base/img/image1.png)
+
+### Задание 4. Упрощаем себе жизнь
+
+Я использую VS Code, тут тоже есть похожий функционал в Source Control. Но я  предпочитаю использовать команды в терминале. 
 
 ----
