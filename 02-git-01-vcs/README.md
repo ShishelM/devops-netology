@@ -7,19 +7,19 @@
 
 - **Ссылка на репозиторий:**  [https://github.com/ShishelM/VCS-base-hw-2.git]
 
-![alt text](/img/02-git-01-vcs/image.png)
-![alt text](/img/02-git-01-vcs/image-1.png)
-![alt text](/img/02-git-01-vcs/image-2.png)
-![alt text](/img/02-git-01-vcs/image-3.png)
-![alt text](/img/02-git-01-vcs/image-4.png)
-![alt text](/img/02-git-01-vcs/image-5.png)
+![alt text](/02-git-01-vcs/img/image.png)
+![alt text](/02-git-01-vcs/img/image-1.png)
+![alt text](/02-git-01-vcs/img/image-2.png)
+![alt text](/02-git-01-vcs/img/image-3.png)
+![alt text](/02-git-01-vcs/img/image-4.png)
+![alt text](/02-git-01-vcs/img/image-5.png)
 
 ### Задание 2. Создание файлов .gitignore и второго коммита
 
 Будут проигнорированы все файлы с расширением .tfstate, а так же каталог terraform
 
-![alt text](/img/02-git-01-vcs/image-6.png)
-![alt text](/img/02-git-01-vcs/image-7.png)
+![alt text](/02-git-01-vcs/img/image-6.png)
+![alt text](/02-git-01-vcs/img/image-7.png)
 
 ### Дополнительно:
 `расшифровать файл из примера: https://github.com/github/gitignore/blob/master/Terraform.gitignore`
@@ -63,10 +63,10 @@ config.[jt]s — проигнорирует config.js и config.ts.
 
 ### Задание 3. Удаление и перемещение файлов (третий и четвёртый коммит)
 
-![alt text](/img/02-git-01-vcs/image-8.png)
-![alt text](/img/02-git-01-vcs/image-9.png)
-![alt text](/img/02-git-01-vcs/image-10.png)
-![alt text](/img/02-git-01-vcs/image-11.png)
+![alt text](/02-git-01-vcs/img/image-8.png)
+![alt text](/02-git-01-vcs/img/image-9.png)
+![alt text](/02-git-01-vcs/img/image-10.png)
+![alt text](/02-git-01-vcs/img/image-11.png)
 
 ### Задание 3.
 
