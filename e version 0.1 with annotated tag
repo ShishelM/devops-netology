@@ -1,0 +1,57 @@
+[33mtag v0.1[m
+Tagger: Pavel <jonyblaze2019@gmail.com>
+Date:   Fri Apr 24 17:22:21 2026 +0300
+
+Release version 0.1 with annotated tag
+
+[33mcommit b79a3567f7fec0cf401fb1f17819ecde701dde25[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;33mtag: [m[1;33mv0.1[m[33m, [m[1;33mtag: [m[1;33mv0.0[m[33m, [m[1;31morigin/main[m[33m, [m[1;31mgitlab/main[m[33m)[m
+Author: Pavel <jonyblaze2019@gmail.com>
+Date:   Fri Apr 24 17:11:20 2026 +0300
+
+    add new homework
+
+[1mdiff --git a/02-git-02-base/README.md b/02-git-02-base/README.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..89da981[m
+[1m--- /dev/null[m
+[1m+++ b/02-git-02-base/README.md[m
+[36m@@ -0,0 +1,38 @@[m
+[32m+[m[32m# Домашнее задание к занятию "`Основы Git`" - `Рыбянцев Павел`[m
+[32m+[m
+[32m+[m[32m------[m
+[32m+[m
+[32m+[m[32m*`немного переделал структуру репозитория, чтобы он  повторял структуру домашних заданий (для удобства)`[m
+[32m+[m
+[32m+[m[32m### Задание 1. Знакомимся с GitLab и Bitbucket[m
+[32m+[m
+[32m+[m[32mНастроил репозиторий GitLab по аналогии GitHub[m
+[32m+[m
+[32m+[m[32mрезультат команды `git remote -v`[m
+[32m+[m[32m```[m
+[32m+[m[32mgitlab  git@gitlab.com:ShishelM_lab/devops-netology.git (fetch)[m
+[32m+[m[32mgitlab  git@gitlab.com:ShishelM_lab/devops-netology.git (push)[m
+[32m+[m[32morigin  git@github.com:ShishelM/devops-netology.git (fetch)[m
+[32m+[m[32morigin  git@github.com:ShishelM/devops-netology.git (push)[m
+[32m+[m[32m```[m
+[32m+[m[32mВыполните push локальной ветки `main`[m
+[32m+[m[32m```[m
+[32m+[m[32m# Локальный[m
+[32m+[m[32mpavel@ubuntu-24:~/devops-netology$ git log -1 --format="%H"[m
+[32m+[m[32m2793c57b0c2f8511541f913fedbdf621a82211cc[m
+[32m+[m
+[32m+[m[32m# GitHub[m
+[32m+[m[32mpavel@ubuntu-24:~/devops-netology$ git ls-remote --heads origin main[m
+[32m+[m[32m2793c57b0c2f8511541f913fedbdf621a82211cc        refs/heads/main[m
+[32m+[m
+[32m+[m[32m# GitLab[m
+[32m+[m[32mpavel@ubuntu-24:~/devops-netology$ git ls-remote --heads gitlab main[m
+[32m+[m[32m2793c57b0c2f8511541f913fedbdf621a82211cc        refs/heads/main[m
+[32m+[m
+[32m+[m[32m# Проверка что послежний коммит везде совпадает[m
+[32m+[m[32mpavel@ubuntu-24:~/devops-netology$ git log --oneline --graph --all[m
+[32m+[m[32m* 2793c57 (HEAD -> main, origin/main, gitlab/main) Fix: readme[m
+[32m+[m[32m* d4e5e81 Fix: readme amd img[m
+[32m+[m[32m* 6a91b0b Fix: convert submodule to normal folder with files[m
+[32m+[m[32m* dc92e1e Final fix: proper folder structure[m
+[32m+[m[32m```[m
+\ No newline at end of file[m

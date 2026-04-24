@@ -36,3 +36,61 @@ pavel@ubuntu-24:~/devops-netology$ git log --oneline --graph --all
 * 6a91b0b Fix: convert submodule to normal folder with files
 * dc92e1e Final fix: proper folder structure
 ```
+
+### Задание 2. Теги
+
+v0.0 (Легковесный): 
+    Выглядит максимально просто. 
+    Это просто ссылка на состояние кода (на коммит). В истории Git у него нет своего автора или даты создания — подтяшивает значения из коммита.
+
+`git show v0.0`
+```
+pavel@ubuntu-24:~/devops-netology$ git show v0.0
+commit b79a3567f7fec0cf401fb1f17819ecde701dde25 (HEAD -> main, tag: v0.1, tag: v0.0, origin/main, gitlab/main)
+Author: Pavel <jonyblaze2019@gmail.com>
+Date:   Fri Apr 24 17:11:20 2026 +0300
+
+    add new homework
+
+diff --git a/02-git-02-base/README.md b/02-git-02-base/README.md
+new file mode 100644
+index 0000000..89da981
+--- /dev/null
++++ b/02-git-02-base/README.md
+@@ -0,0 +1,38 @@
++# .....................
+```
+
+v0.1 (Аннотированный):
+    У  этого тега есть сообщение (которое указывал при создании) и информация о том, кто и когда его создал. В GitHub аннотированные теги становятся основой для создания "Releases" с описанием изменений.
+
+`git show v0.1`
+```
+tag v0.1
+Tagger: Pavel <jonyblaze2019@gmail.com>
+Date:   Fri Apr 24 17:22:21 2026 +0300
+
+Release version 0.1 with annotated tag
+
+commit b79a3567f7fec0cf401fb1f17819ecde701dde25 (HEAD -> main, tag: v0.1, tag: v0.0, origin/main, gitlab/main)
+Author: Pavel <jonyblaze2019@gmail.com>
+Date:   Fri Apr 24 17:11:20 2026 +0300
+
+    add new homework
+
+diff --git a/02-git-02-base/README.md b/02-git-02-base/README.md
+new file mode 100644
+index 0000000..89da981
+--- /dev/null
++++ b/02-git-02-base/README.md
+@@ -0,0 +1,38 @@
++# .....................
+```
+
+для проверки тегов можно выполнить команду:
+`git for-each-ref --format='%(refname:short) %(objecttype)' refs/tags`
+Покажет, какой тег является просто ссылкой на коммит, а какой отдельным объектом "tag"
+```
+v0.0 commit
+v0.1 tag
+```
