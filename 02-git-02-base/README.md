@@ -145,8 +145,8 @@ dc92e1e Final fix: proper folder structure
 
 Я использую VS Code, тут тоже есть похожий функционал в Source Control. Но я  предпочитаю использовать команды в терминале. 
 
-![alt text](/02-git-02-base/imgimage2.png)
+![alt text](/02-git-02-base/img/image2.png)
 
-![alt text](/02-git-02-base/imgimage3.png)
+![alt text](/02-git-02-base/img/image3.png)
 
 ----
