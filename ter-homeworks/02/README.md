@@ -38,10 +38,10 @@
 В качестве решения приложите:
 
 - скриншот ЛК Yandex Cloud с созданной ВМ, где видно внешний ip-адрес;
-![alt text](image-1.png)
+![alt text](img/image-1.png)
 
 - скриншот консоли, curl должен отобразить тот же внешний ip-адрес;
-![alt text](image.png)
+![alt text](img/image.png)
 
 - ответы на вопросы.
 По ошибкам в main.tf:
@@ -72,7 +72,7 @@ core_fraction 5
 1. Замените все хардкод-**значения** для ресурсов **yandex_compute_image** и **yandex_compute_instance** на **отдельные** переменные. К названиям переменных ВМ добавьте в начало префикс **vm_web_** .  Пример: **vm_web_name**.
 2. Объявите нужные переменные в файле variables.tf, обязательно указывайте тип переменной. Заполните их **default** прежними значениями из main.tf. 
 3. Проверьте terraform plan. Изменений быть не должно. 
-![alt text](image-2.png)
+![alt text](img/image-2.png)
 
 
 ### Задание 3
@@ -80,7 +80,7 @@ core_fraction 5
 1. Создайте в корне проекта файл 'vms_platform.tf' . Перенесите в него все переменные первой ВМ.
 2. Скопируйте блок ресурса и создайте с его помощью вторую ВМ в файле main.tf: **"netology-develop-platform-db"** ,  ```cores  = 2, memory = 2, core_fraction = 20```. Объявите её переменные с префиксом **vm_db_** в том же файле ('vms_platform.tf').  ВМ должна работать в зоне "ru-central1-b"
 3. Примените изменения.
-![alt text](image-3.png)
+![alt text](img/image-3.png)
 
 ### Задание 4
 
@@ -88,7 +88,7 @@ core_fraction 5
 2. Примените изменения.
 
 В качестве решения приложите вывод значений ip-адресов команды ```terraform output```.
-![alt text](image-4.png)
+![alt text](img/image-4.png)
 
 ### Задание 5
 
@@ -132,7 +132,7 @@ core_fraction 5
   
 5. Найдите и закоментируйте все, более не используемые переменные проекта.
 6. Проверьте terraform plan. Изменений быть не должно.
-![alt text](image-5.png)
+![alt text](img/image-5.png)
 
 ------
 
