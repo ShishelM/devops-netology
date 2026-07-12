@@ -1,0 +1,12 @@
+[Unit]
+Description=Vector log collector
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/vector --config /etc/vector/vector.toml
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

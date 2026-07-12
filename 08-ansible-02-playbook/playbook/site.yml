@@ -1,0 +1,70 @@
+---
+- name: Install Clickhouse
+  hosts: clickhouse
+  become: true
+  handlers:
+    - name: Start clickhouse service
+      ansible.builtin.service:
+        name: clickhouse-server
+        state: restarted
+
+  tasks:
+    - name: Install Clickhouse packages directly from Ubuntu repository
+      ansible.builtin.apt:
+        name:
+          - clickhouse-server
+          - clickhouse-client
+        state: present
+        update_cache: true
+      notify: Start clickhouse service
+
+    - name: Flush handlers
+      ansible.builtin.meta: flush_handlers
+
+    - name: Create database
+      ansible.builtin.command: "clickhouse-client -q 'create database logs;'"
+      register: create_db
+      failed_when: create_db.rc != 0 and create_db.rc != 82
+      changed_when: create_db.rc == 0
+
+- name: Install and configure Vector
+  hosts: vector
+  become: true
+  handlers:
+    - name: Restart vector service
+      ansible.builtin.service:
+        name: vector
+        state: restarted
+        daemon_reload: true
+
+  tasks:
+    - name: Create vector configuration directory
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        mode: '0755'
+      with_items:
+        - "/etc/vector"
+        - "/var/lib/vector"
+
+    - name: Download and execute official Vector installation script directly to bin
+      ansible.builtin.shell: |
+        curl --proto '=https' --tlsv1.2 -sSfL https://vector.dev | bash -s -- -y --prefix /usr/local
+      args:
+        creates: "/usr/local/bin/vector"
+
+    - name: Create Systemd service unit for Vector
+      ansible.builtin.template:
+        src: templates/vector.service.j2
+        dest: /etc/systemd/system/vector.service
+        owner: root
+        group: root
+        mode: '0644'
+      notify: Restart vector service
+
+    - name: Deploy Vector configuration from template
+      ansible.builtin.template:
+        src: templates/vector.toml.j2
+        dest: "/etc/vector/vector.toml"
+        mode: '0644'
+      notify: Restart vector service

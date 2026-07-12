@@ -1,0 +1,10 @@
+# Стандартный конфиг Vector
+data_dir = "{{ vector_data_dir }}"
+
+[sources.in]
+type = "stdin"
+
+[sinks.out]
+inputs = ["in"]
+type = "console"
+encoding.codec = "text"
