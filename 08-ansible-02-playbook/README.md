@@ -14,16 +14,16 @@
 3. При создании tasks рекомендую использовать модули: `get_url`, `template`, `unarchive`, `file`.
 4. Tasks должны: скачать дистрибутив нужной версии, выполнить распаковку в выбранную директорию, установить vector.
 5. Запустите `ansible-lint site.yml` и исправьте ошибки, если они есть.
-![alt text](image.png)
+![alt text](img/image.png)
 
 6. Попробуйте запустить playbook на этом окружении с флагом `--check`.
-![alt text](image-1.png)
+![alt text](img/image-1.png)
 
 7. Запустите playbook на `prod.yml` окружении с флагом `--diff`. Убедитесь, что изменения на системе произведены.
-![alt text](image-2.png)
+![alt text](img/image-2.png)
 
 8. Повторно запустите playbook с флагом `--diff` и убедитесь, что playbook идемпотентен.
-![alt text](image-3.png)
+![alt text](img/image-3.png)
 
 9. Подготовьте README.md-файл по своему playbook. В нём должно быть описано: что делает playbook, какие у него есть параметры и теги. Пример качественной документации ansible playbook по [ссылке](https://github.com/opensearch-project/ansible-playbook). Так же приложите скриншоты выполнения заданий №5-8
 
